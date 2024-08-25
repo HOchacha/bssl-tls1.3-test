@@ -1,0 +1,1439 @@
+
+Bazel external C/C++ Rules. Building library bssl-compat
+
+Environment:______________
+BUILD_SCRIPT=bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat_foreign_cc/build_script.sh
+EXT_BUILD_ROOT=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy
+BUILD_LOG=bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat_foreign_cc/CMake.log
+PWD=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy
+LLVM_CONFIG=/opt/llvm/bin/llvm-config
+CXX=clang++
+BUILD_WRAPPER_SCRIPT=bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat_foreign_cc/wrapper_build_script.sh
+BAZEL_LINKOPTS=-lm
+TMPDIR=/tmp
+EXT_BUILD_DEPS=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.ext_build_deps
+Clang_ROOT=/usr/lib/llvm
+BAZEL_LINKLIBS=-l%:libstdc++.a
+BUILD_TMPDIR=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir
+SHLVL=2
+INSTALLDIR=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat
+PATH=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy:/opt/llvm/bin:/opt/llvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+BAZEL_COMPILER=clang
+CC=clang
+_=/usr/bin/env
+__________________________
++ /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/external/cmake-3.23.2-linux-x86_64/bin/cmake -DCMAKE_AR=/usr/bin/ar '-DCMAKE_SHARED_LINKER_FLAGS=-shared -fuse-ld=/opt/llvm/bin/ld.lld -Wl,-no-as-needed -Wl,-z,relro,-z,now -B/opt/llvm/bin -lm -l:libstdc++.a -fuse-ld=lld -L/opt/llvm/lib -Wl,-rpath,/opt/llvm/lib' '-DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=/opt/llvm/bin/ld.lld -Wl,-no-as-needed -Wl,-z,relro,-z,now -B/opt/llvm/bin -lm -l:libstdc++.a -fuse-ld=lld -L/opt/llvm/lib -Wl,-rpath,/opt/llvm/lib' -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat -DCMAKE_PREFIX_PATH=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.ext_build_deps -DCMAKE_RANLIB= -DCMAKE_MAKE_PROGRAM=/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-opt-exec-2B5CBBC6/bin/external/rules_foreign_cc/toolchains/make/bin/make -G 'Unix Makefiles' /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bssl-compat
+-- The C compiler identification is Clang 14.0.0
+-- The CXX compiler identification is Clang 14.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/llvm/bin/clang-14 - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/llvm/bin/clang-14 - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the system variable OPENSSL_ROOT_DIR: Found unsuitable version "1.1.1f", but required is at least "3.0" (found /usr/lib/x86_64-linux-gnu/libcrypto.so, found components: Crypto SSL)
+-- Building OpenSSL (https://github.com/openssl/openssl/archive/refs/tags/openssl-3.0.13.tar.gz)
+-- Found LLVM 14.0.0 (/opt/llvm,OFF,OFF,)
+-- Linker detection: LLD
+-- Found Python: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir
++ /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/external/cmake-3.23.2-linux-x86_64/bin/cmake --build . --config Release -j
+[  0%] Creating directories for 'OpenSSL'
+[  0%] Building CXX object prefixer/CMakeFiles/prefixer.dir/prefixer.cpp.o
+[  0%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[  0%] Performing download step (download, verify and extract) for 'OpenSSL'
+-- Downloading...
+   dst='/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/OpenSSL-prefix/src/openssl-3.0.13.tar.gz'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/openssl/openssl/archive/refs/tags/openssl-3.0.13.tar.gz'
+-- verifying file...
+       file='/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/OpenSSL-prefix/src/openssl-3.0.13.tar.gz'
+-- Downloading... done
+-- extracting...
+     src='/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/OpenSSL-prefix/src/openssl-3.0.13.tar.gz'
+     dst='/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/source'
+-- extracting... [tar xfz]
+-- extracting... [analysis]
+-- extracting... [rename]
+-- extracting... [clean up]
+-- extracting... done
+[  0%] No update step for 'OpenSSL'
+[  0%] No patch step for 'OpenSSL'
+[  0%] Performing configure step for 'OpenSSL'
+Configuring OpenSSL version 3.0.13 for target linux-x86_64
+Using os-specific seed configuration
+[  0%] Linking CXX static library ../../../lib/libgtest.a
+[  0%] Built target gtest
+[  0%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[  0%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+Created configdata.pm
+Running configdata.pm
+[  1%] Linking CXX static library ../../../lib/libgtest_main.a
+[  1%] Built target gtest_main
+Created Makefile.in
+Created Makefile
+Created include/openssl/configuration.h
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+[  1%] Performing build step for 'OpenSSL'
+[  1%] Linking CXX static library ../../../lib/libgmock.a
+[  1%] Built target gmock
+[  1%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[  1%] Linking CXX static library ../../../lib/libgmock_main.a
+[  1%] Built target gmock_main
+[  2%] Linking CXX executable prefixer
+[  2%] Built target prefixer
+[  2%] Performing install step for 'OpenSSL'
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install'
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib'
+*** Installing runtime libraries
+install libcrypto.so.3 -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libcrypto.so.3
+install libssl.so.3 -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libssl.so.3
+*** Installing development files
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/engines-3'
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/ossl-modules'
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include'
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl'
+*** Installing engines
+*** Installing modules
+install engines/afalg.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/engines-3/afalg.so
+install providers/legacy.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/ossl-modules/legacy.so
+install ../../../openssl/source/include/openssl/aes.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/aes.h
+install ../../../openssl/source/include/openssl/asn1_mac.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/asn1_mac.h
+install engines/capi.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/engines-3/capi.so
+install ../../../openssl/source/include/openssl/asn1err.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/asn1err.h
+install engines/loader_attic.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/engines-3/loader_attic.so
+install ../../../openssl/source/include/openssl/async.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/async.h
+install ../../../openssl/source/include/openssl/asyncerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/asyncerr.h
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/bin'
+install engines/padlock.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/engines-3/padlock.so
+*** Installing runtime programs
+install apps/openssl -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/bin/openssl
+install ../../../openssl/source/include/openssl/bioerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/bioerr.h
+install ../../../openssl/source/include/openssl/blowfish.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/blowfish.h
+install ../../../openssl/source/include/openssl/bn.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/bn.h
+install tools/c_rehash -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/bin/c_rehash
+install ../../../openssl/source/include/openssl/bnerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/bnerr.h
+install ../../../openssl/source/include/openssl/buffer.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/buffer.h
+install ../../../openssl/source/include/openssl/buffererr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/buffererr.h
+install ../../../openssl/source/include/openssl/camellia.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/camellia.h
+install ../../../openssl/source/include/openssl/cast.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cast.h
+install ../../../openssl/source/include/openssl/cmac.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cmac.h
+install ../../../openssl/source/include/openssl/cmp_util.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cmp_util.h
+install ../../../openssl/source/include/openssl/cmperr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cmperr.h
+install ../../../openssl/source/include/openssl/cmserr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cmserr.h
+install ../../../openssl/source/include/openssl/comp.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/comp.h
+install ../../../openssl/source/include/openssl/comperr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/comperr.h
+install ../../../openssl/source/include/openssl/conf_api.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/conf_api.h
+install ../../../openssl/source/include/openssl/conferr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/conferr.h
+install ../../../openssl/source/include/openssl/conftypes.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/conftypes.h
+install ../../../openssl/source/include/openssl/core.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/core.h
+install ../../../openssl/source/include/openssl/core_dispatch.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/core_dispatch.h
+install ../../../openssl/source/include/openssl/core_names.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/core_names.h
+install ../../../openssl/source/include/openssl/core_object.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/core_object.h
+install ../../../openssl/source/include/openssl/crmferr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/crmferr.h
+install ../../../openssl/source/include/openssl/cryptoerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cryptoerr.h
+install ../../../openssl/source/include/openssl/cryptoerr_legacy.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cryptoerr_legacy.h
+install ../../../openssl/source/include/openssl/cterr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cterr.h
+install ../../../openssl/source/include/openssl/decoder.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/decoder.h
+install ../../../openssl/source/include/openssl/decodererr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/decodererr.h
+install ../../../openssl/source/include/openssl/des.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/des.h
+install ../../../openssl/source/include/openssl/dh.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/dh.h
+install ../../../openssl/source/include/openssl/dherr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/dherr.h
+install ../../../openssl/source/include/openssl/dsa.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/dsa.h
+install ../../../openssl/source/include/openssl/dsaerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/dsaerr.h
+install ../../../openssl/source/include/openssl/dtls1.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/dtls1.h
+install ../../../openssl/source/include/openssl/e_os2.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/e_os2.h
+install ../../../openssl/source/include/openssl/ebcdic.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ebcdic.h
+install ../../../openssl/source/include/openssl/ec.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ec.h
+install ../../../openssl/source/include/openssl/ecdh.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ecdh.h
+install ../../../openssl/source/include/openssl/ecdsa.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ecdsa.h
+install ../../../openssl/source/include/openssl/ecerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ecerr.h
+install ../../../openssl/source/include/openssl/encoder.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/encoder.h
+install ../../../openssl/source/include/openssl/encodererr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/encodererr.h
+install ../../../openssl/source/include/openssl/engine.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/engine.h
+install ../../../openssl/source/include/openssl/engineerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/engineerr.h
+install ../../../openssl/source/include/openssl/esserr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/esserr.h
+install ../../../openssl/source/include/openssl/evp.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/evp.h
+install ../../../openssl/source/include/openssl/evperr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/evperr.h
+install ../../../openssl/source/include/openssl/fips_names.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/fips_names.h
+install ../../../openssl/source/include/openssl/hmac.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/hmac.h
+install ../../../openssl/source/include/openssl/http.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/http.h
+install ../../../openssl/source/include/openssl/httperr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/httperr.h
+install ../../../openssl/source/include/openssl/idea.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/idea.h
+install ../../../openssl/source/include/openssl/kdf.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/kdf.h
+install ../../../openssl/source/include/openssl/kdferr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/kdferr.h
+install ../../../openssl/source/include/openssl/macros.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/macros.h
+install ../../../openssl/source/include/openssl/md2.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/md2.h
+install ../../../openssl/source/include/openssl/md4.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/md4.h
+install ../../../openssl/source/include/openssl/md5.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/md5.h
+install ../../../openssl/source/include/openssl/mdc2.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/mdc2.h
+install ../../../openssl/source/include/openssl/modes.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/modes.h
+install ../../../openssl/source/include/openssl/obj_mac.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/obj_mac.h
+install ../../../openssl/source/include/openssl/objects.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/objects.h
+install ../../../openssl/source/include/openssl/objectserr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/objectserr.h
+install ../../../openssl/source/include/openssl/ocsperr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ocsperr.h
+install ../../../openssl/source/include/openssl/opensslconf.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/opensslconf.h
+install ../../../openssl/source/include/openssl/ossl_typ.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ossl_typ.h
+install ../../../openssl/source/include/openssl/param_build.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/param_build.h
+install ../../../openssl/source/include/openssl/params.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/params.h
+install ../../../openssl/source/include/openssl/pem.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pem.h
+install ../../../openssl/source/include/openssl/pem2.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pem2.h
+install ../../../openssl/source/include/openssl/pemerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pemerr.h
+install ../../../openssl/source/include/openssl/pkcs12err.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pkcs12err.h
+install ../../../openssl/source/include/openssl/pkcs7err.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pkcs7err.h
+install ../../../openssl/source/include/openssl/prov_ssl.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/prov_ssl.h
+install ../../../openssl/source/include/openssl/proverr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/proverr.h
+install ../../../openssl/source/include/openssl/provider.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/provider.h
+install ../../../openssl/source/include/openssl/rand.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/rand.h
+install ../../../openssl/source/include/openssl/randerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/randerr.h
+install ../../../openssl/source/include/openssl/rc2.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/rc2.h
+install ../../../openssl/source/include/openssl/rc4.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/rc4.h
+install ../../../openssl/source/include/openssl/rc5.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/rc5.h
+install ../../../openssl/source/include/openssl/ripemd.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ripemd.h
+install ../../../openssl/source/include/openssl/rsa.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/rsa.h
+install ../../../openssl/source/include/openssl/rsaerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/rsaerr.h
+install ../../../openssl/source/include/openssl/seed.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/seed.h
+install ../../../openssl/source/include/openssl/self_test.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/self_test.h
+install ../../../openssl/source/include/openssl/sha.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/sha.h
+install ../../../openssl/source/include/openssl/srtp.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/srtp.h
+install ../../../openssl/source/include/openssl/ssl2.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ssl2.h
+install ../../../openssl/source/include/openssl/ssl3.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ssl3.h
+install ../../../openssl/source/include/openssl/sslerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/sslerr.h
+install ../../../openssl/source/include/openssl/sslerr_legacy.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/sslerr_legacy.h
+install ../../../openssl/source/include/openssl/stack.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/stack.h
+install ../../../openssl/source/include/openssl/store.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/store.h
+install ../../../openssl/source/include/openssl/storeerr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/storeerr.h
+install ../../../openssl/source/include/openssl/symhacks.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/symhacks.h
+install ../../../openssl/source/include/openssl/tls1.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/tls1.h
+install ../../../openssl/source/include/openssl/trace.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/trace.h
+install ../../../openssl/source/include/openssl/ts.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ts.h
+install ../../../openssl/source/include/openssl/tserr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/tserr.h
+install ../../../openssl/source/include/openssl/txt_db.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/txt_db.h
+install ../../../openssl/source/include/openssl/types.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/types.h
+install ../../../openssl/source/include/openssl/uierr.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/uierr.h
+install ../../../openssl/source/include/openssl/whrlpool.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/whrlpool.h
+install ../../../openssl/source/include/openssl/x509err.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/x509err.h
+install ../../../openssl/source/include/openssl/x509v3err.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/x509v3err.h
+install ./include/openssl/asn1.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/asn1.h
+install ./include/openssl/asn1t.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/asn1t.h
+install ./include/openssl/bio.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/bio.h
+install ./include/openssl/cmp.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cmp.h
+install ./include/openssl/cms.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/cms.h
+install ./include/openssl/conf.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/conf.h
+install ./include/openssl/configuration.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/configuration.h
+install ./include/openssl/crmf.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/crmf.h
+install ./include/openssl/crypto.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/crypto.h
+install ./include/openssl/ct.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ct.h
+install ./include/openssl/err.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/err.h
+install ./include/openssl/ess.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ess.h
+install ./include/openssl/fipskey.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/fipskey.h
+install ./include/openssl/lhash.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/lhash.h
+install ./include/openssl/ocsp.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ocsp.h
+install ./include/openssl/opensslv.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/opensslv.h
+install ./include/openssl/pkcs12.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pkcs12.h
+install ./include/openssl/pkcs7.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/pkcs7.h
+install ./include/openssl/safestack.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/safestack.h
+install ./include/openssl/srp.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/srp.h
+install ./include/openssl/ssl.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ssl.h
+install ./include/openssl/ui.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/ui.h
+install ./include/openssl/x509.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/x509.h
+install ./include/openssl/x509_vfy.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/x509_vfy.h
+install ./include/openssl/x509v3.h -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/include/openssl/x509v3.h
+install libcrypto.a -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libcrypto.a
+install libssl.a -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libssl.a
+link /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libcrypto.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libcrypto.so.3
+link /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libssl.so -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/libssl.so.3
+created directory `/build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/pkgconfig'
+install libcrypto.pc -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/pkgconfig/libcrypto.pc
+install libssl.pc -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/pkgconfig/libssl.pc
+install openssl.pc -> /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat.build_tmpdir/openssl/install/lib/pkgconfig/openssl.pc
+[  2%] No test step for 'OpenSSL'
+[  2%] Completed 'OpenSSL'
+[  2%] Built target OpenSSL
+[  3%] Generating include/openssl/aead.h
+[  3%] Generating source/ssl/ssl_x509.cc
+[  3%] Generating include/openssl/aes.h
+[  3%] Generating include/openssl/arm_arch.h
+[  3%] Generating include/openssl/asn1.h
+[  3%] Generating include/openssl/asn1_mac.h
+[  3%] Generating include/openssl/asn1t.h
+[  3%] Generating include/openssl/base.h
+[  3%] Generating include/openssl/base64.h
+[  3%] Generating include/openssl/bio.h
+[  3%] Generating include/openssl/blake2.h
+[  3%] Generating include/openssl/blowfish.h
+[  4%] Generating include/openssl/bn.h
+[  4%] Generating include/openssl/buf.h
+[  4%] Generating include/openssl/buffer.h
+[  4%] Generating include/openssl/bytestring.h
+[  4%] Generating include/openssl/cast.h
+[  4%] Generating include/openssl/cipher.h
+[  4%] Generating include/openssl/chacha.h
+[  4%] Generating include/openssl/cmac.h
+[  4%] Generating include/openssl/conf.h
+[  4%] Generating include/openssl/cpu.h
+[  5%] Generating include/openssl/crypto.h
+[  5%] Generating include/openssl/curve25519.h
+[  5%] Generating include/openssl/digest.h
+[  5%] Generating include/openssl/dh.h
+[  5%] Generating include/openssl/des.h
+[  5%] Generating include/openssl/dsa.h
+[  5%] Generating include/openssl/e_os2.h
+[  5%] Generating include/openssl/dtls1.h
+[  5%] Generating include/openssl/ec.h
+[  5%] Generating include/openssl/ec_key.h
+[  5%] Generating include/openssl/ecdh.h
+[  5%] Generating include/openssl/ecdsa.h
+[  6%] Generating include/openssl/engine.h
+[  6%] Generating include/openssl/evp.h
+[  6%] Generating include/openssl/err.h
+[  6%] Generating include/openssl/evp_errors.h
+[  6%] Generating include/openssl/ex_data.h
+[  6%] Generating include/openssl/hkdf.h
+[  6%] Generating include/openssl/hmac.h
+[  6%] Generating include/openssl/hpke.h
+[  6%] Generating include/openssl/hrss.h
+[  7%] Generating include/openssl/is_boringssl.h
+[  7%] Generating include/openssl/kdf.h
+[  7%] Generating include/openssl/lhash.h
+[  7%] Generating include/openssl/md4.h
+[  7%] Generating include/openssl/md5.h
+[  7%] Generating include/openssl/mem.h
+[  7%] Generating include/openssl/nid.h
+[  7%] Generating include/openssl/obj.h
+[  7%] Generating include/openssl/obj_mac.h
+[  7%] Generating include/openssl/objects.h
+[  7%] Generating include/openssl/opensslconf.h
+[  8%] Generating include/openssl/opensslv.h
+[  8%] Generating include/openssl/ossl_typ.h
+[  8%] Generating include/openssl/pem.h
+[  8%] Generating include/openssl/pkcs12.h
+[  8%] Generating include/openssl/pkcs7.h
+[  8%] Generating include/openssl/pkcs8.h
+[  8%] Generating include/openssl/poly1305.h
+[  8%] Generating include/openssl/pool.h
+[  8%] Generating include/openssl/rand.h
+[  8%] Generating include/openssl/rc4.h
+[  8%] Generating include/openssl/rsa.h
+[  9%] Generating include/openssl/ripemd.h
+[  9%] Generating include/openssl/safestack.h
+[  9%] Generating include/openssl/service_indicator.h
+[  9%] Generating include/openssl/sha.h
+[  9%] Generating include/openssl/siphash.h
+[  9%] Generating include/openssl/srtp.h
+[  9%] Generating include/openssl/span.h
+[  9%] Generating include/openssl/ssl.h
+[  9%] Generating include/openssl/ssl3.h
+[  9%] Generating include/openssl/stack.h
+[ 10%] Generating include/openssl/thread.h
+[ 10%] Generating include/openssl/tls1.h
+[ 10%] Generating include/openssl/trust_token.h
+[ 10%] Generating include/openssl/type_check.h
+[ 10%] Generating include/openssl/x509.h
+[ 10%] Generating include/openssl/x509_vfy.h
+[ 10%] Generating include/openssl/x509v3.h
+[ 10%] Prefixing OpenSSL files
+[ 10%] Generating source/ASN1_IA5STRING_free.c
+[ 10%] Generating source/ASN1_IA5STRING_new.c
+[ 10%] Generating source/ASN1_INTEGER_free.c
+[ 12%] Generating source/ASN1_INTEGER_new.c
+[ 12%] Generating source/ASN1_INTEGER_to_BN.c
+[ 12%] Generating source/ASN1_OBJECT_free.c
+[ 12%] Generating source/ASN1_STRING_data.c
+[ 12%] Generating source/ASN1_STRING_free.c
+[ 12%] Generating source/ASN1_STRING_get0_data.c
+[ 12%] Generating source/ASN1_STRING_length.c
+[ 12%] Generating source/ASN1_STRING_set.c
+[ 12%] Generating source/ASN1_STRING_to_UTF8.c
+[ 12%] Generating source/ASN1_TIME_adj.c
+[ 12%] Generating source/ASN1_TIME_diff.c
+[ 13%] Generating source/ASN1_TIME_new.c
+[ 13%] Generating source/ASN1_TIME_set.c
+[ 13%] Generating source/BIO_clear_flags.c
+[ 13%] Generating source/BIO_clear_retry_flags.c
+[ 13%] Generating source/BIO_ctrl.c
+[ 13%] Generating source/BIO_ctrl_get_read_request.c
+[ 13%] Generating source/BIO_free_all.c
+[ 13%] Generating source/BIO_ctrl_get_write_guarantee.c
+[ 13%] Generating source/BIO_get_data.c
+[ 13%] Generating source/BIO_get_init.c
+[ 13%] Generating source/BIO_get_mem_ptr.c
+[ 14%] Generating source/BIO_get_shutdown.c
+[ 14%] Generating source/BIO_new_connect.c
+[ 14%] Generating source/BIO_get_mem_data.c
+[ 14%] Generating source/BIO_new_mem_buf.c
+[ 14%] Generating source/BIO_puts.c
+[ 14%] Generating source/BIO_read.c
+[ 14%] Generating source/BIO_reset.c
+[ 14%] Generating source/BIO_set_data.c
+[ 14%] Generating source/BIO_set_init.c
+[ 14%] Generating source/BIO_set_mem_eof_return.c
+[ 14%] Generating source/BIO_set_retry_read.c
+[ 15%] Generating source/BIO_set_retry_write.c
+[ 15%] Generating source/BIO_set_shutdown.c
+[ 15%] Generating source/BIO_should_read.c
+[ 15%] Generating source/BIO_should_retry.c
+[ 15%] Generating source/BIO_should_write.c
+[ 15%] Generating source/BIO_shutdown_wr.c
+[ 15%] Generating source/BIO_up_ref.c
+[ 15%] Generating source/BIO_write.c
+[ 15%] Generating source/BN_add_word.c
+[ 16%] Generating source/BN_dup.c
+[ 16%] Generating source/BN_free.c
+[ 16%] Generating source/BN_hex2bn.c
+[ 16%] Generating source/BN_new.c
+[ 16%] Generating source/BN_num_bits.c
+[ 16%] Generating source/BN_set_word.c
+[ 16%] Generating source/BN_ucmp.c
+[ 16%] Generating source/CRYPTO_memcmp.c
+[ 17%] Generating source/DTLS_method.c
+[ 17%] Generating source/ECDSA_SIG_free.c
+[ 18%] Generating source/ECDSA_SIG_new.c
+[ 18%] Generating source/ECDSA_SIG_get0.c
+[ 18%] Generating source/ECDSA_SIG_set0.c
+[ 18%] Generating source/ECDSA_size.c
+[ 18%] Generating source/EC_GROUP_get0_order.c
+[ 18%] Generating source/EC_GROUP_get_degree.c
+[ 18%] Generating source/EC_GROUP_get_curve_name.c
+[ 18%] Generating source/EC_KEY_free.c
+[ 18%] Generating source/EC_KEY_get0_group.c
+[ 18%] Generating source/EC_KEY_new_by_curve_name.c
+[ 18%] Generating source/ERR_clear_error.c
+[ 18%] Generating source/ERR_print_errors.c
+[ 18%] Generating source/ERR_print_errors_fp.c
+[ 18%] Generating source/ERR_put_error.c
+[ 19%] Generating source/EVP_CIPHER_CTX_ctrl.c
+[ 19%] Generating source/EVP_CIPHER_CTX_free.c
+[ 19%] Generating source/EVP_CIPHER_CTX_new.c
+[ 19%] Generating source/EVP_CIPHER_block_size.c
+[ 19%] Generating source/EVP_CIPHER_iv_length.c
+[ 19%] Generating source/EVP_CIPHER_key_length.c
+[ 19%] Generating source/EVP_DecryptFinal_ex.c
+[ 19%] Generating source/EVP_DecryptInit_ex.c
+[ 19%] Generating source/EVP_DecryptUpdate.c
+[ 19%] Generating source/EVP_DigestFinal_ex.c
+[ 19%] Generating source/EVP_DigestInit.c
+[ 19%] Generating source/EVP_DigestFinal.c
+[ 20%] Generating source/EVP_DigestInit_ex.c
+[ 20%] Generating source/EVP_DigestSignInit.c
+[ 20%] Generating source/EVP_DigestSignUpdate.c
+[ 20%] Generating source/EVP_DigestUpdate.c
+[ 20%] Generating source/EVP_DigestVerify.c
+[ 20%] Generating source/EVP_DigestVerifyInit.c
+[ 20%] Generating source/EVP_DigestVerifyUpdate.c
+[ 20%] Generating source/EVP_EncryptFinal_ex.c
+[ 20%] Generating source/EVP_EncryptInit_ex.c
+[ 20%] Generating source/EVP_EncryptUpdate.c
+[ 20%] Generating source/EVP_MD_CTX_copy_ex.c
+[ 21%] Generating source/EVP_MD_CTX_create.c
+[ 21%] Generating source/EVP_MD_CTX_destroy.c
+[ 21%] Generating source/EVP_MD_CTX_free.c
+[ 21%] Generating source/EVP_MD_CTX_new.c
+[ 21%] Generating source/EVP_MD_size.c
+[ 21%] Generating source/EVP_MD_type.c
+[ 21%] Generating source/EVP_PKEY_CTX_set_rsa_padding.c
+[ 21%] Generating source/EVP_PKEY_CTX_set_rsa_mgf1_md.c
+[ 23%] Generating source/EVP_PKEY_assign_RSA.c
+[ 23%] Generating source/EVP_PKEY_assign_EC_KEY.c
+[ 23%] Generating source/EVP_PKEY_cmp.c
+[ 23%] Generating source/EVP_PKEY_free.c
+[ 23%] Generating source/EVP_PKEY_get_raw_public_key.c
+[ 23%] Generating source/EVP_PKEY_new.c
+[ 23%] Generating source/EVP_PKEY_set1_RSA.c
+[ 23%] Generating source/EVP_PKEY_up_ref.c
+[ 23%] Generating source/EVP_aes_128_gcm.c
+[ 23%] Generating source/EVP_aes_256_cbc.c
+[ 23%] Generating source/EVP_aes_256_gcm.c
+[ 23%] Generating source/EVP_md4.c
+[ 23%] Generating source/EVP_md5.c
+[ 23%] Generating source/EVP_md5_sha1.c
+[ 23%] Generating source/EVP_sha1.c
+[ 23%] Generating source/EVP_sha224.c
+[ 24%] Generating source/EVP_sha256.c
+[ 24%] Generating source/EVP_sha384.c
+[ 24%] Generating source/EVP_sha512.c
+[ 24%] Generating source/GENERAL_NAME_set0_value.c
+[ 24%] Generating source/HMAC.c
+[ 24%] Generating source/HMAC_CTX_free.c
+[ 24%] Generating source/HMAC_CTX_new.c
+[ 24%] Generating source/HMAC_Final.c
+[ 24%] Generating source/HMAC_Update.c
+[ 24%] Generating source/OBJ_txt2obj.c
+[ 24%] Generating source/OPENSSL_free.c
+[ 25%] Generating source/OPENSSL_init_ssl.c
+[ 27%] Generating source/RSA_verify.c
+[ 29%] Generating source/SSL_CIPHER_get_id.c
+[ 29%] Generating source/SSL_CTX_set_cert_store.c
+[ 30%] Generating source/SSL_CTX_set_max_proto_version.c
+[ 25%] Generating source/RSA_bits.c
+[ 31%] Generating source/SSL_CTX_use_certificate_file.c
+[ 25%] Generating source/RSA_check_key.c
+[ 25%] Generating source/SSL_CTX_set_timeout.c
+[ 25%] Generating source/RSA_sign.c
+[ 25%] Generating source/SSL_CIPHER_get_cipher_nid.c
+[ 25%] Generating source/SSL_CTX_use_PrivateKey_file.c
+[ 25%] Generating source/SSL_CTX_free.c
+[ 25%] Generating source/SSL_SESSION_free.c
+[ 25%] Generating source/SSL_CIPHER_get_digest_nid.c
+[ 25%] Generating source/SSL_CTX_new.c
+[ 25%] Generating source/SSL_CTX_get_verify_mode.c
+[ 25%] Generating source/SSL_CTX_set_alpn_protos.c
+[ 25%] Generating source/SSL_CTX_set_session_id_context.c
+[ 25%] Generating source/SSL_CTX_set_cipher_list.c
+[ 25%] Generating source/SHA256.c
+[ 25%] Generating source/SHA1.c
+[ 25%] Generating source/OPENSSL_malloc.c
+[ 25%] Generating source/RSA_get0_factors.c
+[ 25%] Generating source/RSA_new.c
+[ 25%] Generating source/SSL_CTX_get0_param.c
+[ 25%] Generating source/SSL_CTX_set_min_proto_version.c
+[ 25%] Generating source/SSL_CTX_get_cert_store.c
+[ 25%] Generating source/SHA224.c
+[ 25%] Generating source/RSA_set0_key.c
+[ 25%] Generating source/SSL_CIPHER_standard_name.c
+[ 25%] Generating source/SSL_CTX_set1_curves_list.c
+[ 25%] Generating source/SSL_CTX_load_verify_locations.c
+[ 25%] Generating source/SSL_CTX_check_private_key.c
+[ 25%] Generating source/SSL_CTX_set_session_cache_mode.c
+[ 25%] Generating source/SSL_CTX_add_extra_chain_cert.c
+[ 25%] Generating source/SSL_CTX_set_tlsext_servername_arg.c
+[ 25%] Generating source/SHA384.c
+[ 25%] Generating source/RSA_set0_crt_params.c
+[ 25%] Generating source/SSL_CIPHER_get_auth_nid.c
+[ 25%] Generating source/SHA512.c
+[ 25%] Generating source/SSL_CTX_set_ex_data.c
+[ 25%] Generating source/SSL_CIPHER_get_name.c
+[ 25%] Generating source/SSL_CTX_get_options.c
+[ 25%] Generating source/SSL_CTX_set_options.c
+[ 25%] Generating source/SSL_CTX_get_ex_data.c
+[ 25%] Generating source/SSL_CTX_set1_sigalgs_list.c
+[ 25%] Generating source/PEM_bytes_read_bio.c
+[ 25%] Generating source/PKCS12_free.c
+[ 25%] Generating source/RSA_get0_crt_params.c
+[ 25%] Generating source/OPENSSL_realloc.c
+[ 25%] Generating source/SSL_CTX_set_tmp_ecdh.c
+[ 25%] Generating source/OPENSSL_memdup.c
+[ 25%] Generating source/RSA_set0_factors.c
+[ 25%] Generating source/RSA_size.c
+[ 25%] Generating source/SSL_SESSION_set_protocol_version.c
+[ 25%] Generating source/SSL_CTX_get0_certificate.c
+[ 31%] Generating source/RSA_free.c
+[ 25%] Generating source/SSL_SESSION_get_id.c
+[ 25%] Generating source/RSA_get0_key.c
+[ 25%] Generating source/SSL_CTX_use_certificate_chain_file.c
+[ 31%] Generating source/MD5.c
+[ 31%] Generating source/SSL_SESSION_is_resumable.c
+[ 31%] Generating source/SSL_accept.c
+[ 31%] Generating source/SSL_alert_desc_string_long.c
+[ 31%] Generating source/SSL_SESSION_up_ref.c
+[ 31%] Generating source/SSL_connect.c
+[ 31%] Generating source/SSL_do_handshake.c
+[ 31%] Generating source/SSL_free.c
+[ 31%] Generating source/SSL_get0_alpn_selected.c
+[ 31%] Generating source/SSL_get0_next_proto_negotiated.c
+[ 31%] Generating source/SSL_get1_session.c
+[ 32%] Generating source/SSL_get_SSL_CTX.c
+[ 32%] Generating source/SSL_get_current_cipher.c
+[ 32%] Generating source/SSL_get_certificate.c
+[ 32%] Generating source/SSL_get_error.c
+[ 32%] Generating source/SSL_get_ex_data_X509_STORE_CTX_idx.c
+[ 32%] Generating source/SSL_get_ex_data.c
+[ 32%] Generating source/SSL_get_peer_certificate.c
+[ 32%] Generating source/SSL_get_rbio.c
+[ 32%] Generating source/SSL_get_version.c
+[ 32%] Generating source/SSL_get_session.c
+[ 32%] Generating source/SSL_get_wbio.c
+[ 32%] Generating source/SSL_is_init_finished.c
+[ 32%] Generating source/SSL_is_server.c
+[ 32%] Generating source/SSL_new.c
+[ 32%] Generating source/SSL_read.c
+[ 32%] Generating source/SSL_session_reused.c
+[ 34%] Generating source/SSL_select_next_proto.c
+[ 34%] Generating source/SSL_set0_rbio.c
+[ 34%] Generating source/SSL_set0_wbio.c
+[ 35%] Generating source/SSL_set1_curves_list.c
+[ 35%] Generating source/SSL_set_accept_state.c
+[ 35%] Generating source/SSL_set_SSL_CTX.c
+[ 35%] Generating source/SSL_set_alpn_protos.c
+[ 35%] Generating source/SSL_set_bio.c
+[ 35%] Generating source/SSL_set_cipher_list.c
+[ 36%] Generating source/SSL_set_connect_state.c
+[ 36%] Generating source/SSL_set_ex_data.c
+[ 36%] Generating source/SSL_set_fd.c
+[ 36%] Generating source/SSL_set_session.c
+[ 36%] Generating source/SSL_set_quiet_shutdown.c
+[ 36%] Generating source/SSL_set_session_id_context.c
+[ 36%] Generating source/SSL_set_tlsext_host_name.c
+[ 36%] Generating source/SSL_shutdown.c
+[ 36%] Generating source/SSL_state_string.c
+[ 36%] Generating source/SSL_state_string_long.c
+[ 36%] Generating source/SSL_version.c
+[ 36%] Generating source/SSL_write.c
+[ 36%] Generating source/TLS_client_method.c
+[ 36%] Generating source/TLS_method.c
+[ 36%] Generating source/TLS_server_method.c
+[ 36%] Generating source/X509_CRL_dup.c
+[ 36%] Generating source/X509_CRL_free.c
+[ 36%] Generating source/X509_CRL_cmp.c
+[ 36%] Generating source/X509_CRL_get_issuer.c
+[ 36%] Generating source/X509_CRL_up_ref.c
+[ 36%] Generating source/X509_INFO_free.c
+[ 36%] Generating source/X509_NAME_ENTRY_get_data.c
+[ 36%] Generating source/X509_NAME_ENTRY_set.c
+[ 36%] Generating source/X509_NAME_add_entry_by_txt.c
+[ 36%] Generating source/X509_NAME_cmp.c
+[ 36%] Generating source/X509_NAME_digest.c
+[ 36%] Generating source/X509_NAME_dup.c
+[ 37%] Generating source/X509_NAME_free.c
+[ 37%] Generating source/X509_NAME_get_index_by_NID.c
+[ 37%] Generating source/X509_NAME_new.c
+[ 37%] Generating source/X509_NAME_entry_count.c
+[ 37%] Generating source/X509_NAME_get_entry.c
+[ 37%] Generating source/X509_NAME_oneline.c
+[ 37%] Generating source/X509_NAME_print_ex.c
+[ 37%] Generating source/X509_STORE_CTX_free.c
+[ 37%] Generating source/X509_PUBKEY_get.c
+[ 37%] Generating source/X509_STORE_CTX_get0_cert.c
+[ 37%] Generating source/X509_STORE_CTX_get_error.c
+[ 37%] Generating source/X509_STORE_CTX_get_current_cert.c
+[ 37%] Generating source/X509_STORE_CTX_get_ex_data.c
+[ 37%] Generating source/X509_STORE_CTX_new.c
+[ 37%] Generating source/X509_STORE_CTX_get0_param.c
+[ 37%] Generating source/X509_STORE_CTX_get_error_depth.c
+[ 37%] Generating source/X509_STORE_CTX_set_default.c
+[ 38%] Generating source/X509_STORE_CTX_set_error.c
+[ 38%] Generating source/X509_STORE_CTX_set_flags.c
+[ 38%] Generating source/X509_STORE_add_cert.c
+[ 39%] Generating source/X509_STORE_add_crl.c
+[ 39%] Generating source/X509_STORE_load_locations.c
+[ 39%] Generating source/X509_STORE_free.c
+[ 39%] Generating source/X509_STORE_get0_param.c
+[ 39%] Generating source/X509_STORE_new.c
+[ 39%] Generating source/X509_STORE_set_check_crl.c
+[ 39%] Generating source/X509_STORE_set_get_crl.c
+[ 39%] Generating source/X509_STORE_set_verify_cb.c
+[ 39%] Generating source/X509_STORE_set_flags.c
+[ 39%] Generating source/X509_STORE_up_ref.c
+[ 39%] Generating source/X509_VERIFY_PARAM_get_flags.c
+[ 39%] Generating source/X509_VERIFY_PARAM_clear_flags.c
+[ 39%] Generating source/X509_VERIFY_PARAM_set1.c
+[ 39%] Generating source/X509_add1_ext_i2d.c
+[ 39%] Generating source/X509_VERIFY_PARAM_set_flags.c
+[ 40%] Generating source/X509_digest.c
+[ 40%] Generating source/X509_cmp.c
+[ 40%] Generating source/X509_alias_get0.c
+[ 40%] Generating source/X509_free.c
+[ 40%] Generating source/X509_get_X509_PUBKEY.c
+[ 40%] Generating source/X509_get0_notAfter.c
+[ 40%] Generating source/X509_get_ext.c
+[ 40%] Generating source/X509_get0_notBefore.c
+[ 41%] Generating source/X509_get_ext_d2i.c
+[ 41%] Generating source/X509_get_ext_by_OBJ.c
+[ 41%] Generating source/X509_get_extension_flags.c
+[ 41%] Generating source/X509_get_issuer_name.c
+[ 41%] Generating source/X509_get_key_usage.c
+[ 41%] Generating source/X509_get_pathlen.c
+[ 41%] Generating source/X509_get_pubkey.c
+[ 41%] Generating source/X509_get_serialNumber.c
+[ 41%] Generating source/X509_get_subject_name.c
+[ 42%] Generating source/X509_getm_notAfter.c
+[ 42%] Generating source/X509_new.c
+[ 42%] Generating source/X509_set_version.c
+[ 42%] Generating source/X509_getm_notBefore.c
+[ 42%] Generating source/X509_set_pubkey.c
+[ 43%] Generating source/X509_up_ref.c
+[ 43%] Generating source/X509_verify.c
+[ 43%] Generating source/X509_verify_cert.c
+[ 45%] Generating source/crypto/bytestring/cbb.c
+[ 45%] Generating source/crypto/bytestring/cbs.c
+[ 45%] Generating source/crypto/internal.h
+[ 45%] Generating source/d2i_PKCS12_bio.c
+[ 45%] Generating source/crypto/mem.c
+[ 45%] Generating source/d2i_SSL_SESSION.c
+[ 45%] Generating source/d2i_X509.c
+[ 45%] Generating source/i2d_SSL_SESSION.c
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/ASN1_TIME_free.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BASIC_CONSTRAINTS_free.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BASIC_CONSTRAINTS_new.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/bio_meth_map.cpp.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_free.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_mem_contents.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_new_bio_pair.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_new.cc.o
+[ 45%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_pending.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_printf.cc.o
+[ 46%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_read_asn1.c.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_s_mem.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_s_socket.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_snprintf.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BIO_vfree.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BN_cmp_word.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BN_bn2hex.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/BN_bin2bn.cc.o
+[ 46%] Building CXX object CMakeFiles/bssl-compat.dir/source/c2i_ASN1_INTEGER.cc.o
+[ 47%] Building C object CMakeFiles/bssl-compat.dir/source/CRYPTO_BUFFER_free.c.o
+[ 47%] Building C object CMakeFiles/bssl-compat.dir/source/CRYPTO_BUFFER_new.c.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/d2i_GENERAL_NAME.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/ECDSA_do_verify.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/ECDSA_sign.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/EC_KEY_check_fips.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/EC_KEY_parse_private_key.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/EC_KEY_set_public_key_affine_coordinate.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/ED25519_verify.cc.o
+[ 47%] Building CXX object CMakeFiles/bssl-compat.dir/source/err.cc.o
+[ 47%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DecodeBase64.c.o
+[ 48%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DecodedLength.c.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_DigestVerifyFinal.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_DigestSignFinal.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_MD_CTX_move.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_parse_public_key.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_get0_EC_KEY.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_get0_RSA.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_get1_EC_KEY.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_get1_RSA.cc.o
+[ 48%] Building CXX object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_id.cc.o
+[ 49%] Building C object CMakeFiles/bssl-compat.dir/source/ext_SSL_get_all_async_fds.c.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/FIPS_mode.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/GENERAL_NAME_free.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/GENERAL_NAME_new.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/GENERAL_NAMES_free.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/GENERAL_NAMES_new.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/GENERAL_SUBTREE_free.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/GENERAL_SUBTREE_new.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/HMAC_Init_ex.cc.o
+[ 49%] Building CXX object CMakeFiles/bssl-compat.dir/source/i2d_X509_PUBKEY.cc.o
+[ 49%] Building C object CMakeFiles/bssl-compat.dir/source/i2d_X509.c.o
+[ 49%] Building C object CMakeFiles/bssl-compat.dir/source/log.c.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/iana_2_ossl_names.cc.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/NAME_CONSTRAINTS_free.cc.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/NAME_CONSTRAINTS_new.cc.o
+[ 50%] Building C object CMakeFiles/bssl-compat.dir/source/ossl.c.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/override.cc.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_read_bio_PrivateKey.cc.o
+[ 50%] Building C object CMakeFiles/bssl-compat.dir/source/PEM_read_bio_RSAPrivateKey.c.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_read_bio_X509.cc.o
+[ 50%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_read_bio_X509_AUX.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_read_bio_X509_CRL.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_read_bio_PUBKEY.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_write_bio_X509.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PEM_X509_INFO_read_bio.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PKCS12_get_key_and_certs.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PKCS12_parse.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/PKCS12_verify_mac.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/RAND_bytes.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_check_fips.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_decrypt.cc.o
+[ 51%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_encrypt.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_generate_key_ex.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_private_key_from_bytes.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_public_key_from_bytes.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/RSA_sign_pss_mgf1.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/SHA256.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_add_file_cert_subjects_to_stack.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_kx_nid.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_min_version.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_prf_nid.cc.o
+[ 52%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_rfc_name.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_ciphers.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_client_CA_list.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_max_proto_version.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_min_proto_version.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_ex_new_index.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_session_cache_mode.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_sess_set_new_cb.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_alpn_select_cb.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_cert_verify_callback.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_client_CA_list.cc.o
+[ 53%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_custom_verify.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_next_protos_advertised_cb.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_private_key_method.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_select_certificate_cb.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_strict_cipher_list.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_ciphersuites.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_tlsext_servername_callback.cc.o
+[ 54%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_tlsext_status_cb.c.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_tlsext_ticket_key_cb.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_tlsext_ticket_keys.cc.o
+[ 54%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_verify_algorithm_prefs.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_verify_depth.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_next_proto_select_cb.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_keylog_callback.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_verify.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_use_certificate.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_CTX_use_PrivateKey.cc.o
+[ 56%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_early_callback_ctx_extension_get.c.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_enable_ocsp_stapling.cc.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_error_description.cc.o
+[ 56%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get0_ocsp_response.c.o
+[ 56%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get0_peer_verify_algorithms.cc.o
+[ 57%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_cipher_by_value.c.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_client_CA_list.cc.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_ciphers.cc.o
+[ 57%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_curve_id.c.o
+[ 57%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_curve_name.c.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_ex_new_index.cc.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_peer_cert_chain.cc.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_peer_full_cert_chain.cc.o
+[ 57%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_peer_signature_algorithm.c.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_servername.cc.o
+[ 57%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_signature_algorithm_digest.cc.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_get_signature_algorithm_key_type.cc.o
+[ 58%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_signature_algorithm_name.c.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_is_signature_algorithm_rsa_pss.cc.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_send_fatal_alert.cc.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_get_ticket_lifetime_hint.cc.o
+[ 58%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_from_bytes.c.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_get_version.cc.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_new.cc.o
+[ 58%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_should_be_single_use.cc.o
+[ 58%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_to_bytes.c.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_cert_cb.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_chain_and_key.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_client_CA_list.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_ocsp_response.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_renegotiate_mode.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_info_callback.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/SSL_set_verify.cc.o
+[ 59%] Building C object CMakeFiles/bssl-compat.dir/source/stack.c.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/TLS_VERSION_to_string.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/TLS_with_buffers_method.cc.o
+[ 59%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_EXTENSION_get_data.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_sign.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get0_untrusted.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_init.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get0_chain.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_set0_crls.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_set0_trusted_stack.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_set_verify_cb.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_verify_cert_error_string.cc.o
+[ 60%] Building CXX object CMakeFiles/bssl-compat.dir/source/X509_VERIFY_PARAM_set_time_posix.cc.o
+[ 60%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_IA5STRING_free.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_IA5STRING_new.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_INTEGER_free.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_INTEGER_new.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_INTEGER_to_BN.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_OBJECT_free.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_STRING_data.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_STRING_free.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_STRING_get0_data.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_STRING_length.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_STRING_set.c.o
+[ 61%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_STRING_to_UTF8.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_TIME_adj.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_TIME_diff.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_TIME_new.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/ASN1_TIME_set.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_clear_flags.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_clear_retry_flags.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_ctrl.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_ctrl_get_read_request.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_ctrl_get_write_guarantee.c.o
+[ 62%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_get_data.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_get_init.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_get_mem_ptr.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_get_shutdown.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_new_connect.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_new_mem_buf.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_puts.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_read.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_reset.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_get_mem_data.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_set_data.c.o
+[ 63%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_set_init.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_set_mem_eof_return.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_set_retry_read.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_set_retry_write.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_set_shutdown.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_should_read.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_should_retry.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_should_write.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_shutdown_wr.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_up_ref.c.o
+[ 64%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_free_all.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BIO_write.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_add_word.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_dup.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_free.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_hex2bn.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_new.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_num_bits.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_set_word.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/BN_ucmp.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/CRYPTO_memcmp.c.o
+[ 65%] Building C object CMakeFiles/bssl-compat.dir/source/d2i_PKCS12_bio.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/d2i_SSL_SESSION.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/d2i_X509.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/DTLS_method.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/EC_GROUP_get_curve_name.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/EC_GROUP_get_degree.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/EC_GROUP_get0_order.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/EC_KEY_free.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/EC_KEY_new_by_curve_name.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/EC_KEY_get0_group.c.o
+[ 67%] Building C object CMakeFiles/bssl-compat.dir/source/ECDSA_size.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ECDSA_SIG_free.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ECDSA_SIG_get0.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ECDSA_SIG_new.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ECDSA_SIG_set0.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ERR_clear_error.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ERR_print_errors.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ERR_print_errors_fp.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/ERR_put_error.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_aes_256_cbc.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_aes_128_gcm.c.o
+[ 68%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_aes_256_gcm.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_CIPHER_CTX_free.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_CIPHER_CTX_new.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_CIPHER_CTX_ctrl.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_CIPHER_block_size.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_CIPHER_iv_length.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_CIPHER_key_length.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DecryptFinal_ex.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DecryptInit_ex.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DecryptUpdate.c.o
+[ 69%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestFinal.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestFinal_ex.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestInit.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestInit_ex.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestSignInit.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestUpdate.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestSignUpdate.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestVerify.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestVerifyUpdate.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_DigestVerifyInit.c.o
+[ 70%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_EncryptFinal_ex.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_EncryptUpdate.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_CTX_copy_ex.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_CTX_create.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_EncryptInit_ex.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_CTX_free.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_CTX_new.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_CTX_destroy.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_size.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_MD_type.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_md5.c.o
+[ 71%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_md4.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_md5_sha1.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_assign_EC_KEY.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_assign_RSA.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_cmp.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_CTX_set_rsa_mgf1_md.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_CTX_set_rsa_padding.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_free.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_up_ref.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_get_raw_public_key.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_new.c.o
+[ 72%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_PKEY_set1_RSA.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_sha1.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_sha224.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_sha256.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_sha384.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/EVP_sha512.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/GENERAL_NAME_set0_value.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/HMAC.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/HMAC_CTX_free.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/HMAC_CTX_new.c.o
+[ 73%] Building C object CMakeFiles/bssl-compat.dir/source/HMAC_Final.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/HMAC_Update.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/i2d_SSL_SESSION.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/MD5.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/OBJ_txt2obj.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/OPENSSL_free.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/OPENSSL_malloc.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/OPENSSL_memdup.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/OPENSSL_realloc.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/OPENSSL_init_ssl.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/PKCS12_free.c.o
+[ 74%] Building C object CMakeFiles/bssl-compat.dir/source/PEM_bytes_read_bio.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_bits.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_check_key.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_free.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_get0_crt_params.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_get0_factors.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_get0_key.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_new.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_set0_crt_params.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_set0_factors.c.o
+[ 75%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_set0_key.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_sign.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_size.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/RSA_verify.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SHA1.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SHA224.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SHA256.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SHA384.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SHA512.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_accept.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_alert_desc_string_long.c.o
+[ 76%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_auth_nid.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_cipher_nid.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_digest_nid.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_id.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_get_name.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CIPHER_standard_name.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_connect.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_add_extra_chain_cert.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_check_private_key.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_tmp_ecdh.c.o
+[ 78%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get0_next_proto_negotiated.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_free.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_cert_store.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_cert_store.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_ex_data.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_options.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get_verify_mode.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get0_certificate.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_get0_param.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_load_verify_locations.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_new.c.o
+[ 79%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_alpn_protos.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_cipher_list.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_ex_data.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_max_proto_version.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_min_proto_version.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_options.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_session_cache_mode.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_session_id_context.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_timeout.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set_tlsext_servername_arg.c.o
+[ 80%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set1_curves_list.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_set1_sigalgs_list.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_use_certificate_chain_file.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_use_certificate_file.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_CTX_use_PrivateKey_file.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_do_handshake.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_free.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_certificate.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_current_cipher.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_error.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_ex_data.c.o
+[ 81%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_ex_data_X509_STORE_CTX_idx.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_peer_certificate.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_session.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_SSL_CTX.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_version.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_wbio.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get_rbio.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get0_alpn_selected.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_get1_session.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_is_server.c.o
+[ 82%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_is_init_finished.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_new.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_read.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_select_next_proto.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_free.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_get_id.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_is_resumable.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_session_reused.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_set_protocol_version.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_SESSION_up_ref.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_accept_state.c.o
+[ 83%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_alpn_protos.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_bio.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_cipher_list.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_connect_state.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_ex_data.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_fd.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_quiet_shutdown.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_session.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_session_id_context.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_SSL_CTX.c.o
+[ 84%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set_tlsext_host_name.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set0_rbio.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set0_wbio.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_set1_curves_list.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_state_string_long.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_state_string.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_shutdown.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_version.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/SSL_write.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/TLS_client_method.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/TLS_method.c.o
+[ 85%] Building C object CMakeFiles/bssl-compat.dir/source/TLS_server_method.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_add1_ext_i2d.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_alias_get0.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_cmp.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_CRL_cmp.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_CRL_dup.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_CRL_get_issuer.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_CRL_free.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_CRL_up_ref.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_free.c.o
+[ 86%] Building C object CMakeFiles/bssl-compat.dir/source/X509_digest.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_ext.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_ext_by_OBJ.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_ext_d2i.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_extension_flags.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_issuer_name.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_key_usage.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_pathlen.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_serialNumber.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_pubkey.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_subject_name.c.o
+[ 87%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get_X509_PUBKEY.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get0_notAfter.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_get0_notBefore.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_getm_notAfter.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_getm_notBefore.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_INFO_free.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_add_entry_by_txt.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_cmp.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_digest.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_dup.c.o
+[ 89%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_entry_count.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_ENTRY_get_data.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_ENTRY_set.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_free.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_get_entry.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_get_index_by_NID.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_new.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_oneline.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_NAME_print_ex.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_new.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_PUBKEY_get.c.o
+[ 90%] Building C object CMakeFiles/bssl-compat.dir/source/X509_set_pubkey.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_set_version.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_add_cert.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_add_crl.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_free.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get_current_cert.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get_error.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get_error_depth.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get_ex_data.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get0_cert.c.o
+[ 91%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_get0_param.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_new.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_set_default.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_set_error.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_CTX_set_flags.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_free.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_get0_param.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_load_locations.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_new.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_up_ref.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_set_flags.c.o
+[ 92%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_set_get_crl.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_set_check_crl.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_STORE_set_verify_cb.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_up_ref.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_verify.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_verify_cert.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_VERIFY_PARAM_clear_flags.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_VERIFY_PARAM_get_flags.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_VERIFY_PARAM_set_flags.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/X509_VERIFY_PARAM_set1.c.o
+[ 93%] Building C object CMakeFiles/bssl-compat.dir/source/crypto/mem.c.o
+[ 94%] Building C object CMakeFiles/bssl-compat.dir/source/crypto/bytestring/cbs.c.o
+[ 94%] Building C object CMakeFiles/bssl-compat.dir/source/crypto/bytestring/cbb.c.o
+[ 94%] Building CXX object CMakeFiles/bssl-compat.dir/source/ssl/ssl_x509.cc.o
+[ 94%] Linking CXX static library libbssl-compat.a
+[ 94%] Built target bssl-compat
+[ 94%] Generating source/ssl/ssl_test.cc
+[ 94%] Generating source/crypto/bio/bio_test.cc
+[ 94%] Generating source/crypto/digest_extra/digest_test.cc
+[ 94%] Generating source/crypto/err/err_test.cc
+[ 94%] Generating source/crypto/hmac_extra/hmac_test.cc
+[ 94%] Generating source/crypto/pkcs8/pkcs12_test.cc
+[ 94%] Generating source/crypto/rand_extra/rand_test.cc
+[ 94%] Generating source/crypto/rsa_extra/rsa_test.cc
+[ 95%] Generating source/crypto/stack/stack_test.cc
+[ 95%] Generating source/crypto/test/crypto_test_data.cc
+[ 95%] Generating source/crypto/test/file_test.cc
+[ 95%] Generating source/crypto/test/file_test.h
+[ 95%] Generating source/crypto/test/file_test_gtest.cc
+[ 95%] Generating source/crypto/test/test_util.cc
+[ 95%] Generating source/crypto/test/test_util.h
+[ 95%] Generating source/crypto/x509/x509_test.cc
+[ 95%] Generating source/crypto/x509v3/internal.h
+[ 95%] Generating source/ssl/ssl_c_test.c
+[ 95%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_asn1.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_bio.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_bn.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_cipher.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_crypto.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_ec_key.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_err.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_evp.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_hmac.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_misc.cc.o
+[ 96%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_rsa.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_ssl.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_stack.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_x509.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_x509v3.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_pem.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/test/test_sha256.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/test/crypto_test_data.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/bio/bio_test.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/digest_extra/digest_test.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/err/err_test.cc.o
+[ 97%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/hmac_extra/hmac_test.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/pkcs8/pkcs12_test.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/rand_extra/rand_test.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/rsa_extra/rsa_test.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/stack/stack_test.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/test/file_test_gtest.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/test/file_test.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/test/test_util.cc.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/crypto/x509/x509_test.cc.o
+[ 98%] Building C object CMakeFiles/utests-bssl-compat.dir/source/ssl/ssl_c_test.c.o
+[ 98%] Building CXX object CMakeFiles/utests-bssl-compat.dir/source/ssl/ssl_test.cc.o
+[100%] Linking CXX executable utests-bssl-compat
+[100%] Built target utests-bssl-compat
++ /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/external/cmake-3.23.2-linux-x86_64/bin/cmake --install . --config Release
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/lib/libbssl-compat.a
+-- Up-to-date: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/./include
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/./include/ext
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/./include/ext/openssl
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/./include/ext/openssl/ssl.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/conf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/types.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ct.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cryptoerr_legacy.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/md2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/x509v3err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/rc5.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/engine.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/hmac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ssl.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/seed.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/crypto.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/whrlpool.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/symhacks.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/prov_ssl.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/x509err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/async.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/bn.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/objectserr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/asn1err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/params.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/txt_db.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/x509_vfy.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/proverr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ecdh.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/fips_names.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/uierr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/mdc2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/buffererr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/aes.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/decoder.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/conferr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ts.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/blowfish.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/sha.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/kdferr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/dsaerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/encodererr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ebcdic.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ocsp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/encoder.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/asyncerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/tserr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/core.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/configuration.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/opensslv.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/conftypes.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/asn1_mac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/self_test.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/core_dispatch.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/rc2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/sslerr_legacy.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/http.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pkcs7err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cmac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/objects.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/dherr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/tls1.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/bnerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/x509v3.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cmp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/buffer.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cms.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cmp_util.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/httperr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pkcs12.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/stack.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/rand.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/md4.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pemerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/engineerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/trace.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/decodererr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/store.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/camellia.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/opensslconf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/rsaerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/randerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ssl3.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/rsa.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/evp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/crmf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pem.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/bioerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/param_build.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/kdf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/comp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/idea.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/esserr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ssl2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cast.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pem2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/fipskey.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ossl_typ.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/dh.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/storeerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/asn1.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/lhash.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ui.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pkcs12err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/evperr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/safestack.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ocsperr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/x509.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cterr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ess.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/dtls1.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/des.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/core_object.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ecdsa.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/macros.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/obj_mac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/crmferr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/sslerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ripemd.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/core_names.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/comperr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/pkcs7.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/asn1t.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/conf_api.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cmperr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/e_os2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ecerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/dsa.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/modes.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cryptoerr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/srp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/md5.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/srtp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/provider.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/rc4.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/ec.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/bio.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl/openssl/cmserr.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/conf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/digest.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/engine.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/hmac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ssl.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/crypto.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/mem.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/bn.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/x509_vfy.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ecdh.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/aes.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/poly1305.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/blowfish.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/sha.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ex_data.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/chacha.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/evp_errors.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/service_indicator.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/opensslv.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/asn1_mac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/pool.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/trust_token.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/curve25519.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/nid.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/cmac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/objects.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/tls1.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/x509v3.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/thread.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/base64.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/pkcs8.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/buffer.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/siphash.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/pkcs12.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/stack.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/rand.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/md4.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/obj.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/type_check.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/hpke.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/is_boringssl.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/opensslconf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ssl3.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/rsa.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/evp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/cipher.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/pem.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/cpu.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/kdf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/cast.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ossl_typ.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/hkdf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/err.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/dh.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/buf.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/asn1.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/lhash.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/safestack.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/x509.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/arm_arch.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/dtls1.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/des.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/span.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/bytestring.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ecdsa.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/obj_mac.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/aead.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ripemd.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/pkcs7.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/asn1t.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/base.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ec_key.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/e_os2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/hrss.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/dsa.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/blake2.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/md5.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/srtp.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/rc4.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/ec.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/openssl/bio.h
+-- Installing: /build/bazel_root/base/sandbox/processwrapper-sandbox/3/execroot/envoy/bazel-out/k8-fastbuild/bin/bssl-compat/bssl-compat/include/ossl.h
++ set +x
